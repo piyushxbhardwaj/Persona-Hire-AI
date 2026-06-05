@@ -9,6 +9,11 @@ class CrossEncoderReranker:
         self.model = None
         self.is_active = False
         
+        import os
+        if os.getenv("RENDER_DEPLOYMENT") == "true":
+            logger.info("RENDER_DEPLOYMENT is true. Bypassing CrossEncoder loading to save memory on Render.")
+            return
+            
         try:
             from sentence_transformers import CrossEncoder
             logger.info(f"Loading CrossEncoder reranker model: {self.model_name}...")
