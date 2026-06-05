@@ -224,10 +224,7 @@ class CalendarService:
                             "dateTime": end_datetime,
                             "timeZone": local_tz
                         },
-                        "attendees": [
-                            {"email": attendee_email, "displayName": attendee_name},
-                            {"email": "piyushbhardwaj634@gmail.com", "displayName": "Piyush Bhardwaj"}
-                        ],
+                        "attendees": [],
                         "reminders": {
                             "useDefault": True
                         }
