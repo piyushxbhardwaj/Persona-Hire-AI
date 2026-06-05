@@ -26,35 +26,35 @@ class ChromaStore:
         self.github_col = self.chroma_client.get_or_create_collection(name="github_collection")
         self.commit_col = self.chroma_client.get_or_create_collection(name="commit_collection")
         
-        # Initialize OpenAI Client
+        # Initialize OpenAI Client (still kept for chat completions)
         api_key = os.getenv("OPENAI_API_KEY")
         if not api_key:
             logger.warning("OPENAI_API_KEY is not set in environment variables.")
         self.openai_client = OpenAI(api_key=api_key)
 
+        # Initialize BGE model locally (BAAI/bge-small-en-v1.5)
+        from sentence_transformers import SentenceTransformer
+        logger.info("Loading BGE embedding model (BAAI/bge-small-en-v1.5)...")
+        self.embedding_model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+        logger.info("BGE embedding model loaded successfully.")
+
     def _get_embedding(self, texts: List[str]) -> List[List[float]]:
-        """Get embeddings for a list of texts using text-embedding-3-small."""
+        """Get embeddings for a list of texts using BAAI/bge-small-en-v1.5."""
         if not texts:
             return []
         try:
-            # Check for dummy or missing key
-            if not self.openai_client.api_key or "your_" in str(self.openai_client.api_key):
-                raise ValueError("API Key is unconfigured or dummy.")
-            
-            response = self.openai_client.embeddings.create(
-                input=[t.replace("\n", " ") for t in texts],
-                model="text-embedding-3-small"
-            )
-            return [data.embedding for data in response.data]
+            # Generate embeddings using BGE model
+            embeddings = self.embedding_model.encode([t.replace("\n", " ") for t in texts], normalize_embeddings=True)
+            return [emb.tolist() for emb in embeddings]
         except Exception as e:
-            logger.warning(f"Using offline deterministic mock embeddings (1536-dim) due to: {e}")
+            logger.warning(f"Using offline deterministic mock embeddings (384-dim) due to: {e}")
             import random
             mock_embeddings = []
             for t in texts:
                 # Use string character sums as seed to keep embeddings deterministic for identical inputs
                 seed = sum(ord(c) for c in t)
                 rng = random.Random(seed)
-                mock_embeddings.append([rng.uniform(-1, 1) for _ in range(1536)])
+                mock_embeddings.append([rng.uniform(-1, 1) for _ in range(384)])
             return mock_embeddings
 
     def add_documents(self, collection_name: str, documents: List[str], metadatas: List[Dict[str, Any]], ids: List[str]):
