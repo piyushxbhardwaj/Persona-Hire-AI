@@ -1,0 +1,305 @@
+[
+  {
+    "name": "MeetMindAI",
+    "description": "TypeScript-powered AI meeting assistant that processes transcripts, extracts actionable items, and generates structured meeting summaries.",
+    "readme": "# MeetMindAI\n\nMeetMindAI is an AI-powered meeting assistant designed to tackle the problem of capturing action items and key insights from long, unstructured meetings.\n\n### Tech Stack\n- TypeScript, Node.js, React, OpenAI API\n\n### Key Features\n- Direct transcription processing\n- Automated actionable item extraction\n- Multi-turn summaries and meeting minutes generation",
+    "languages": ["TypeScript", "JavaScript", "HTML", "CSS"],
+    "topics": ["ai", "meeting-assistant", "openai", "typescript", "react"],
+    "commits": [
+      {
+        "hash": "a1b2c3d",
+        "message": "Initial commit and project configuration",
+        "date": "2026-04-10T10:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "e4f5g6h",
+        "message": "Integrate OpenAI API for transcript summarization",
+        "date": "2026-04-12T14:30:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "i7j8k9l",
+        "message": "Add action item extraction logic and validation",
+        "date": "2026-04-15T09:15:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "m0n1o2p",
+        "message": "Optimize UI rendering for long transcriptions",
+        "date": "2026-04-18T16:45:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "q3r4s5t",
+        "message": "Fix React hydration bug in meet summary panel",
+        "date": "2026-04-20T11:20:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  },
+  {
+    "name": "ai-decision-matrix",
+    "description": "Interactive evaluation dashboard and decision framework providing real-time recommendations for enterprise LLM selection based on cost, latency, and privacy tradeoffs.",
+    "readme": "# AI Decision Matrix\n\nSelecting the right AI model for enterprise systems requires navigating complex cost, latency, and privacy tradeoffs. This project provides an interactive dashboard to evaluate and select LLMs.\n\n### Tech Stack\n- HTML5, CSS3, JavaScript, Tailwind CSS",
+    "languages": ["HTML", "CSS", "JavaScript"],
+    "topics": ["llm", "decision-matrix", "tailwind-css", "evaluation"],
+    "commits": [
+      {
+        "hash": "b2c3d4e",
+        "message": "Create model cost estimator template",
+        "date": "2026-03-05T11:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "f6g7h8i",
+        "message": "Add Tailwind styling and layout structure",
+        "date": "2026-03-08T15:20:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "j0k1l2m",
+        "message": "Add interactive charts for latency vs cost trade-off analysis",
+        "date": "2026-03-12T13:10:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "n3o4p5q",
+        "message": "Update LLM recommendations matrix with latest GPT-4o-mini details",
+        "date": "2026-03-15T10:45:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  },
+  {
+    "name": "cloud-kitchen-market-intelligence-nashik",
+    "description": "Market intelligence system analyzing competitor density, customer demand zones, and optimizing regional pricing models for cloud kitchens in Nashik.",
+    "readme": "# Cloud Kitchen Market Intelligence Nashik\n\nDeveloped a market intelligence system using Python to analyze competitor density, customer demand zones, and optimize regional pricing models in Nashik to reduce restaurant failure rates.\n\n### Tech Stack\n- Python, Pandas, Numpy, Data Analysis",
+    "languages": ["Python", "Jupyter Notebook"],
+    "topics": ["data-science", "market-analysis", "python", "pandas", "nashik"],
+    "commits": [
+      {
+        "hash": "c3d4e5f",
+        "message": "Initial commit with competitor data scraper",
+        "date": "2026-02-10T09:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "g7h8i9j",
+        "message": "Implement density mapping and area scoring logic",
+        "date": "2026-02-14T14:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "k1l2m3n",
+        "message": "Add regional pricing model optimization algorithms",
+        "date": "2026-02-18T16:30:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "o4p5q6r",
+        "message": "Fix customer demand zone calculations and boundary overlaps",
+        "date": "2026-02-22T11:15:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  },
+  {
+    "name": "pictoai",
+    "description": "High-quality image generation from natural language descriptions using Hugging Face Transformers Stable Diffusion with real-time API integration.",
+    "readme": "# PictoAI\n\nPictoAI is a robust text-to-image generator using Hugging Face Transformers and Stable Diffusion. It includes a Flask API backend and MongoDB caching to store image metadata.\n\n### Why ChromaDB or Vector DB was selected for research extension?\nChromaDB was selected for a semantic image indexing extension, permitting users to run image-to-image queries based on visual descriptions embedded in vector spaces.\n\n### Tech Stack\n- Python, Flask, MongoDB, Stable Diffusion",
+    "languages": ["Python", "HTML", "CSS"],
+    "topics": ["stable-diffusion", "flask", "mongodb", "text-to-image", "transformers"],
+    "commits": [
+      {
+        "hash": "d4e5f6g",
+        "message": "Integrate Stable Diffusion pipeline with Hugging Face",
+        "date": "2025-11-01T10:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "h8i9j0k",
+        "message": "Add Flask REST endpoints for image generation requests",
+        "date": "2025-11-05T14:40:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "l2m3n4o",
+        "message": "Configure MongoDB to cache generated image metadata and prompts",
+        "date": "2025-11-10T11:20:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "p5q6r7s",
+        "message": "Fix VRAM memory leak during concurrent generation tasks",
+        "date": "2025-11-15T17:10:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  },
+  {
+    "name": "order-api",
+    "description": "Highly available REST API handling high-volume e-commerce order creation with efficient validation, transaction consistency, and race condition prevention.",
+    "readme": "# Order Creation API\n\nThis API addresses transaction consistency and race conditions during high-volume checkouts on e-commerce platforms.\n\n### Tech Stack\n- Java, Spring Boot, SQL, PostgreSQL",
+    "languages": ["Java"],
+    "topics": ["spring-boot", "java", "rest-api", "transactional", "concurrency"],
+    "commits": [
+      {
+        "hash": "e5f6g7h",
+        "message": "Setup basic Spring Boot project and model entities",
+        "date": "2026-01-08T09:30:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "i9j0k1l",
+        "message": "Create Order and Transaction entity schemas and repositories",
+        "date": "2026-01-12T11:50:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "m3n4o5p",
+        "message": "Implement optimistic locking to resolve checkout race conditions",
+        "date": "2026-01-16T15:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "q6r7s8t",
+        "message": "Optimize database indexing on userId and orderTimestamp",
+        "date": "2026-01-20T10:10:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  },
+  {
+    "name": "AetherGuard-Forensics",
+    "description": "Deep learning forensics engine capable of detecting synthetic media anomalies (deepfakes) with high accuracy, implementing neural anomaly verification.",
+    "readme": "# AetherGuard Forensics\n\nAetherGuard is a deepfake detection system designed to counter threats to media authenticity. It uses PyTorch models to spot synthetic face changes in videos.\n\n### Research Publication\n- Published in IJAMRED Journal, May 2026. DOI: 10.5281/zenodo.20108986\n\n### Tech Stack\n- Python, FastAPI, PyTorch, OpenCV, Deep Learning",
+    "languages": ["Python"],
+    "topics": ["deep-learning", "deepfake-detection", "fastapi", "computer-vision", "research"],
+    "commits": [
+      {
+        "hash": "f6g7h8i",
+        "message": "Setup PyTorch models and network weights loader",
+        "date": "2026-04-22T10:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "j0k1l2m",
+        "message": "Implement neural anomaly detector for video faces",
+        "date": "2026-04-26T16:20:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "n3o4p5q",
+        "message": "Build FastAPI inference endpoint for video uploads",
+        "date": "2026-05-01T12:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "r7s8t9u",
+        "message": "Validate models with test dataset, achieve 94.8% detection accuracy",
+        "date": "2026-05-05T14:45:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  },
+  {
+    "name": "SplitEase",
+    "description": "Expense-sharing platform that dynamically computes ledger balances on-the-fly to prevent sync anomalies.",
+    "readme": "# SplitEase\n\nSplitEase is a modern bill-splitting application that computes ledger balances on-the-fly. This prevents database synchronization anomalies common in peer-to-peer expense logs.\n\n### Tech Stack\n- Next.js 16, React, TypeScript, Supabase, PostgreSQL, Tailwind CSS",
+    "languages": ["TypeScript", "TSX", "CSS"],
+    "topics": ["nextjs", "react", "supabase", "postgresql", "expense-tracker"],
+    "commits": [
+      {
+        "hash": "g7h8i9j",
+        "message": "Setup Next.js 16 project structure and config files",
+        "date": "2026-05-10T11:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "k2l3m4n",
+        "message": "Integrate Supabase Auth and Database connection pool",
+        "date": "2026-05-14T15:40:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "o5p6q7r",
+        "message": "Implement on-the-fly ledger balance computation algorithm",
+        "date": "2026-05-18T13:10:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "s8t9u0v",
+        "message": "Add Tailwind styling and mobile responsive navbar",
+        "date": "2026-05-22T09:30:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  },
+  {
+    "name": "KnowledgeFlow-Ai",
+    "description": "Semantic-search task board leveraging FAISS and SentenceTransformers locally to index and search workspace documentation by meaning rather than exact keywords.",
+    "readme": "# KnowledgeFlow AI\n\nKnowledgeFlow AI replaces exact keyword task searches with local semantic search. It embeds workspace cards using SentenceTransformers and queries them using a FAISS index.\n\n### Tech Stack\n- FastAPI, React, MySQL, SentenceTransformers, FAISS, Python",
+    "languages": ["Python", "JavaScript", "HTML", "CSS"],
+    "topics": ["semantic-search", "faiss", "sentence-transformers", "fastapi", "react"],
+    "commits": [
+      {
+        "hash": "h8i9j0k",
+        "message": "Integrate FAISS vector search engine and load templates",
+        "date": "2026-03-20T10:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "l2m3n4o",
+        "message": "Setup SentenceTransformers locally for document embeddings",
+        "date": "2026-03-24T14:50:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "p5q6r7s",
+        "message": "Create FastAPI database sync routes and MySQL handlers",
+        "date": "2026-03-28T11:10:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "t8u9v0w",
+        "message": "Build React task board UI with semantic search query bar",
+        "date": "2026-04-02T16:25:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  },
+  {
+    "name": "breatheesg-emissions-platform",
+    "description": "Django-based enterprise emissions platform parsing mixed-language CSV utility logs, calculating carbon footprints via Haversine distance, and managing compliance audits.",
+    "readme": "# BreatheESG Emissions Platform\n\nBreatheESG provides auditing tools to calculate corporate emissions footprints. It parses utility files and computes transportation logs based on Haversine distance metrics.\n\n### Tech Stack\n- Django REST, React, PostgreSQL, Python, Vanilla CSS",
+    "languages": ["Python", "JavaScript", "CSS"],
+    "topics": ["django", "react", "esg", "emissions-tracker", "postgresql"],
+    "commits": [
+      {
+        "hash": "i9j0k1l",
+        "message": "Setup Django REST framework and core models",
+        "date": "2026-05-24T09:00:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "m3n4o5p",
+        "message": "Implement CSV parsing for mixed-language utilities logs",
+        "date": "2026-05-26T14:15:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "q6r7s8t",
+        "message": "Add carbon footprint calculators using Haversine distances",
+        "date": "2026-05-28T16:40:00Z",
+        "author": "Piyush Bhardwaj"
+      },
+      {
+        "hash": "u9v0w1x",
+        "message": "Write unit tests for emissions auditor and validation scripts",
+        "date": "2026-06-01T11:20:00Z",
+        "author": "Piyush Bhardwaj"
+      }
+    ]
+  }
+]

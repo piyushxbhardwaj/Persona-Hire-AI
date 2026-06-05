@@ -1,0 +1,29 @@
+{
+  "2026-06-09": {
+    "09:00-10:00": {
+      "attendee_email": "tester0@scaler.com",
+      "name": "Tester 0",
+      "event_id": "evt_1780567154"
+    },
+    "10:00-11:00": {
+      "attendee_email": "tester1@scaler.com",
+      "name": "Tester 1",
+      "event_id": "evt_1780567154"
+    },
+    "11:00-12:00": {
+      "attendee_email": "tester2@scaler.com",
+      "name": "Tester 2",
+      "event_id": "evt_1780567154"
+    },
+    "12:00-13:00": {
+      "attendee_email": "tester3@scaler.com",
+      "name": "Tester 3",
+      "event_id": "evt_1780567154"
+    },
+    "13:00-14:00": {
+      "attendee_email": "tester4@scaler.com",
+      "name": "Tester 4",
+      "event_id": "evt_1780567154"
+    }
+  }
+}

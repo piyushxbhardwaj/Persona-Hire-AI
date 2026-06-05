@@ -1,0 +1,27 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment files and credentials
+.env
+.env.local
+.env.*.local
+
+# Local databases and stores
+data/chroma_db/
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db

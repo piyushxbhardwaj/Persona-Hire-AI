@@ -1,0 +1,110 @@
+{
+  "name": "Piyush Bhardwaj AI Representative",
+  "firstMessage": "Hello! I am Piyush Bhardwaj's AI Representative. I can discuss Piyush's background, B.E. Computer Science credentials, deepfake detection research, or help you book an interview directly. How can I assist you?",
+  "transcriber": {
+    "provider": "deepgram",
+    "model": "nova-2",
+    "language": "en-US"
+  },
+  "voice": {
+    "provider": "elevenlabs",
+    "voiceId": "pMs2t959CgILMTErT21I",
+    "model": "eleven_flash_v2",
+    "stability": 0.5,
+    "similarityBoost": 0.75
+  },
+  "model": {
+    "provider": "custom-llm",
+    "url": "https://your-backend-api-url.render.com/api/voice",
+    "model": "gpt-4o-mini",
+    "temperature": 0,
+    "systemPrompt": "You are the official AI Representative of Piyush Bhardwaj. Be brief, professional, and grounded in the retrieved context. If you need to search slots or book, invoke the tools."
+  },
+  "recordingEnabled": true,
+  "interruptionsEnabled": true,
+  "silenceTimeoutSeconds": 30,
+  "model_tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_available_slots",
+        "description": "Fetch a list of available interview slots for a given date in YYYY-MM-DD format.",
+        "parameters": {
+          "type": "OBJECT",
+          "properties": {
+            "date": {
+              "type": "STRING",
+              "description": "The date to inspect in YYYY-MM-DD format."
+            }
+          },
+          "required": [
+            "date"
+          ]
+        }
+      }
+    ],
+    {
+      "type": "function",
+      "function": {
+        "name": "book_interview",
+        "description": "Book a new interview event. Must double-check availability using get_available_slots first.",
+        "parameters": {
+          "type": "OBJECT",
+          "properties": {
+            "date": {
+              "type": "STRING",
+              "description": "Date of booking in YYYY-MM-DD format."
+            },
+            "slot": {
+              "type": "STRING",
+              "description": "Time slot string in HH:00-HH:00 format, e.g. 10:00-11:00."
+            },
+            "email": {
+              "type": "STRING",
+              "description": "Recruiter's contact email address."
+            },
+            "name": {
+              "type": "STRING",
+              "description": "Recruiter's name."
+            }
+          },
+          "required": [
+            "date",
+            "slot",
+            "email",
+            "name"
+          ]
+        }
+      }
+    ],
+    {
+      "type": "function",
+      "function": {
+        "name": "cancel_interview",
+        "description": "Cancel an existing scheduled interview using the unique event_id, date, and slot.",
+        "parameters": {
+          "type": "OBJECT",
+          "properties": {
+            "date": {
+              "type": "STRING",
+              "description": "The date of the booking to cancel."
+            },
+            "slot": {
+              "type": "STRING",
+              "description": "The time slot of the booking to cancel."
+            },
+            "event_id": {
+              "type": "STRING",
+              "description": "The unique event ID returned during booking."
+            }
+          },
+          "required": [
+            "date",
+            "slot",
+            "event_id"
+          ]
+        }
+      }
+    }
+  ]
+}

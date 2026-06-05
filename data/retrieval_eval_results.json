@@ -1,0 +1,278 @@
+{
+  "total_evaluated_queries": 15,
+  "average_precision_at_5": 54.67,
+  "average_recall_at_5": 93.33,
+  "average_mrr": 0.9,
+  "details": [
+    {
+      "id": "q1",
+      "query": "Where does Piyush Bhardwaj study and what is his degree?",
+      "category": "resume",
+      "expected_sources": [
+        "resume_collection"
+      ],
+      "retrieved_sources": [
+        "resume_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q2",
+      "query": "What certifications does Piyush hold?",
+      "category": "resume",
+      "expected_sources": [
+        "resume_collection"
+      ],
+      "retrieved_sources": [
+        "resume_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q3",
+      "query": "How many data structures and algorithms problems has Piyush solved?",
+      "category": "resume",
+      "expected_sources": [
+        "resume_collection"
+      ],
+      "retrieved_sources": [
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 0.0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "q4",
+      "query": "What is PictoAI and what tech stack does it use?",
+      "category": "github",
+      "expected_sources": [
+        "github_collection"
+      ],
+      "retrieved_sources": [
+        "github_collection",
+        "github_collection",
+        "github_collection",
+        "resume_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q5",
+      "query": "Why was ChromaDB selected for the PictoAI research extension?",
+      "category": "github",
+      "expected_sources": [
+        "github_collection"
+      ],
+      "retrieved_sources": [
+        "github_collection",
+        "github_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q6",
+      "query": "What problem does MeetMindAI solve?",
+      "category": "github",
+      "expected_sources": [
+        "github_collection"
+      ],
+      "retrieved_sources": [
+        "github_collection",
+        "github_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q7",
+      "query": "What is AetherGuard Forensics and where was the research published?",
+      "category": "github",
+      "expected_sources": [
+        "github_collection"
+      ],
+      "retrieved_sources": [
+        "github_collection",
+        "github_collection",
+        "commit_collection",
+        "github_collection",
+        "resume_collection"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q8",
+      "query": "What is the DOI for the AetherGuard deepfake detection research?",
+      "category": "github",
+      "expected_sources": [
+        "github_collection"
+      ],
+      "retrieved_sources": [
+        "github_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "resume_collection"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q9",
+      "query": "What is the detection accuracy achieved by the AetherGuard models?",
+      "category": "github",
+      "expected_sources": [
+        "github_collection"
+      ],
+      "retrieved_sources": [
+        "commit_collection",
+        "github_collection",
+        "github_collection",
+        "commit_collection",
+        "resume_collection"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "q10",
+      "query": "What tech stack was selected for SplitEase?",
+      "category": "github",
+      "expected_sources": [
+        "github_collection"
+      ],
+      "retrieved_sources": [
+        "github_collection",
+        "github_collection",
+        "github_collection",
+        "github_collection",
+        "github_collection"
+      ],
+      "precision_at_5": 1.0,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q11",
+      "query": "What did Piyush change in the recent commit of BreatheESG?",
+      "category": "commit",
+      "expected_sources": [
+        "commit_collection"
+      ],
+      "retrieved_sources": [
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 1.0,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q12",
+      "query": "What was the commit message for the SplitEase ledger balance algorithm on May 18, 2026?",
+      "category": "commit",
+      "expected_sources": [
+        "commit_collection"
+      ],
+      "retrieved_sources": [
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "github_collection"
+      ],
+      "precision_at_5": 0.8,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q13",
+      "query": "Who is the author of the commit to MeetMindAI on April 12, 2026?",
+      "category": "commit",
+      "expected_sources": [
+        "commit_collection"
+      ],
+      "retrieved_sources": [
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 1.0,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q14",
+      "query": "What is the hash of the commit for integrating stable diffusion pipeline in PictoAI?",
+      "category": "commit",
+      "expected_sources": [
+        "commit_collection"
+      ],
+      "retrieved_sources": [
+        "commit_collection",
+        "commit_collection",
+        "github_collection",
+        "github_collection",
+        "resume_collection"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q15",
+      "query": "What did Piyush change in the order-api commit on January 16, 2026?",
+      "category": "commit",
+      "expected_sources": [
+        "commit_collection"
+      ],
+      "retrieved_sources": [
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection",
+        "commit_collection"
+      ],
+      "precision_at_5": 1.0,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    }
+  ]
+}
