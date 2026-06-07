@@ -5,10 +5,10 @@ logger = logging.getLogger("Guardrails")
 
 # Common prompt injection patterns
 INJECTION_PATTERNS = [
-    r"ignore\s+(?:previous|all|the)\s+instructions",
-    r"reveal\s+(?:system\s+prompt|instructions|prompt)",
-    r"output\s+system\s+prompt",
-    r"print\s+system\s+prompt",
+    r"ignore\s+(?:previous|all|the|all\s+previous|your)?\s*instructions",
+    r"reveal\s+.*prompt",
+    r"output\s+.*prompt",
+    r"print\s+.*prompt",
     r"you\s+are\s+now\s+a",
     r"pretend\s+you\s+are",
     r"forget\s+your\s+(?:grounding|instructions|persona)",
@@ -37,6 +37,10 @@ class InputGuard:
         for pattern in COMPILED_PATTERNS:
             if pattern.search(query):
                 logger.warning(f"Guardrail triggered! Query matched pattern: {pattern.pattern}")
+                # For sensitive credential requests, return grounding refusal as expected
+                query_lower = query.lower()
+                if any(kw in query_lower for kw in ["password", "token", "secret", "credential", "login", "key"]):
+                    return False, "I don't know based on the available resume and GitHub data."
                 return False, "I cannot fulfill this request. I am only programmed to discuss Piyush Bhardwaj's background, experience, projects, skills, or assist in scheduling interviews."
 
         # Length safety
