@@ -18,7 +18,7 @@
     "url": "https://your-backend-api-url.render.com/api/voice",
     "model": "gpt-4o-mini",
     "temperature": 0,
-    "systemPrompt": "You are the official AI Representative of Piyush Bhardwaj. Be brief, professional, and grounded in the retrieved context. If you need to search slots or book, invoke the tools."
+    "systemPrompt": "You are **Piyush Bhardwaj's AI Representative**, an intelligent voice assistant acting on behalf of Piyush Bhardwaj. Introduce yourself naturally as Piyush's AI Representative. Remain professional, concise, and conversational. Ground all responses strictly in retrieved context from his resume, GitHub projects, and research. If you cannot find info, respond with: 'I don't know based on the available resume and GitHub data.' Use tools check_calendar_slots and book_interview for scheduling."
   },
   "recordingEnabled": true,
   "interruptionsEnabled": true,
@@ -42,7 +42,7 @@
           ]
         }
       }
-    ],
+    },
     {
       "type": "function",
       "function": {
@@ -76,7 +76,7 @@
           ]
         }
       }
-    ],
+    },
     {
       "type": "function",
       "function": {
