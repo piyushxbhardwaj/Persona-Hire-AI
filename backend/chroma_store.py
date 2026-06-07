@@ -18,8 +18,10 @@ class ChromaStore:
             current_dir = os.path.dirname(os.path.abspath(__file__))
             db_path = os.path.join(os.path.dirname(current_dir), "data", "chroma_db")
         
-        logger.info(f"Initializing ChromaDB persistent client at: {db_path}")
-        self.chroma_client = chromadb.PersistentClient(path=db_path)
+        self.chroma_client = chromadb.PersistentClient(
+            path=db_path,
+            settings=chromadb.Settings(anonymized_telemetry=False)
+        )
         
         # Initialize collections
         self.resume_col = self.chroma_client.get_or_create_collection(name="resume_collection")
@@ -32,16 +34,32 @@ class ChromaStore:
             logger.warning("OPENAI_API_KEY is not set in environment variables.")
         self.openai_client = OpenAI(api_key=api_key)
 
-        # Initialize BGE model locally (BAAI/bge-small-en-v1.5)
-        from sentence_transformers import SentenceTransformer
-        logger.info("Loading BGE embedding model (BAAI/bge-small-en-v1.5)...")
-        self.embedding_model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-        logger.info("BGE embedding model loaded successfully.")
+        # Initialize BGE model only for local development
+        self.embedding_model = None
+
+        if os.getenv("RENDER_DEPLOYMENT", "").lower() != "true":
+            from sentence_transformers import SentenceTransformer
+
+            logger.info("Loading BGE embedding model (BAAI/bge-small-en-v1.5)...")
+            self.embedding_model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+            logger.info("BGE embedding model loaded successfully.")
+        else:
+            logger.info("Render deployment detected. Skipping BGE model loading.")
 
     def _get_embedding(self, texts: List[str]) -> List[List[float]]:
         """Get embeddings for a list of texts using BAAI/bge-small-en-v1.5."""
         if not texts:
             return []
+        if self.embedding_model is None:
+            import random
+
+            mock_embeddings = []
+            for t in texts:
+                seed = sum(ord(c) for c in t)
+                rng = random.Random(seed)
+                mock_embeddings.append([rng.uniform(-1, 1) for _ in range(384)])
+            return mock_embeddings
+
         try:
             # Generate embeddings using BGE model
             embeddings = self.embedding_model.encode([t.replace("\n", " ") for t in texts], normalize_embeddings=True)
